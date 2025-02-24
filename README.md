@@ -1,1 +1,1 @@
-java
+Exercícios variados de Java.
