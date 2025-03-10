@@ -2,7 +2,7 @@
 válidas). Em seguida, mostrar o valor das áreas dos dois triângulos e dizer qual dos dois triângulos
 possui a maior área.
 (PROBLEMA SOLUCIONADO COM POO)
-classe Triangulo definida: 
+classe Triangulo definida: */
 
 package entidades;
 
@@ -11,7 +11,7 @@ public class Triangulo {
 	public double a;
 	public double b;
 	public double c;
-} */
+} 
 
 package aplicação;
 
