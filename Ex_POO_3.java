@@ -3,7 +3,8 @@ quantidade no estoque). Em seguida:
 • Mostrar os dados do produto (nome, preço, quantidade no estoque, valor total no
 estoque)
 • Realizar uma entrada no estoque e mostrar novamente os dados do produto
-• Realizar uma saída no estoque e mostrar novamente os dados do produto*/
+• Realizar uma saída no estoque e mostrar novamente os dados do produto
+• UTILIZAR CONSTRUTOR */
 
 package entidades;
 
@@ -12,6 +13,12 @@ public class Produto {
 	public String nome;
 	public double preço;
 	public int quantidade;
+	
+	public Produto(String nome, double preço, int quantidade) {
+		this.nome = nome;
+		this.preço = preço;
+		this.quantidade = quantidade;
+	}
 	
 	public double valorTotalEstoque() {
 		return preço * quantidade;
@@ -30,8 +37,11 @@ public class Produto {
 		+quantidade
 		+" unidades, Total: $ "
 		+String.format("%.2f",valorTotalEstoque());
+	
+				
 	}
 }
+
 
 package aplicação;
 
@@ -40,39 +50,39 @@ import java.util.Scanner;
 
 import entidades.Produto;
 
-public class Programa2 {
+public class ProgramaProduto {
 
 	public static void main(String[] args) {
-		
+
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Produto produto = new Produto();
-		System.out.println("digite os dados do produto: ");
-		System.out.print("nome: ");
-		produto.nome = sc.nextLine();
+		System.out.printf("digite os dados do produto. %nnome: ");
+		String nome = sc.nextLine();
 		System.out.print("preço: ");
-		produto.preço = sc.nextDouble();
+		double preço = sc.nextDouble();
 		System.out.print("quantidade: ");
-		produto.quantidade = sc.nextInt();
-		
-		produto.toString();
-		
-		System.out.printf("%ndados do produto: "+produto+"%n");
-		
-		System.out.printf("%ndigite o número de produtos a serem adicionados no estoque: ");
 		int quantidade = sc.nextInt();
+		Produto produto = new Produto(nome, preço, quantidade);
+
+		produto.toString();
+
+		System.out.printf("%ndados do produto: " + produto + "%n");
+
+		System.out.printf("%ndigite o número de produtos a serem adicionados no estoque: ");
+		quantidade = sc.nextInt();
 		produto.adicionarProdutos(quantidade);
-		
-		System.out.printf("%ndados atualizados do produto: "+produto);
-		
+
+		System.out.printf("%ndados atualizados do produto: " + produto);
+
 		System.out.printf("%ndigite o número de produtos a serem removidos do estoque: ");
-		quantidade =sc.nextInt();
+		quantidade = sc.nextInt();
 		produto.removerProdutos(quantidade);
-		
-		System.out.printf("%ndados atualizados do produto: "+produto);
-		
+
+		System.out.printf("%ndados atualizados do produto: " + produto);
+
 		sc.close();
 	}
 
 }
+
