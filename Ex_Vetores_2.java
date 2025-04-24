@@ -50,7 +50,7 @@ public class ProgramaProdutos_Vetores {
 		int n = sc.nextInt();
 		Produtos_Vetores[] vect = new Produtos_Vetores[n];
 		
-		for (int i=0; i<n;i++) {
+		for (int i=0; i<vect.length;i++) {
 			sc.nextLine();
 			System.out.println("digite o nome do produto: ");
 			String nome = sc.nextLine();
