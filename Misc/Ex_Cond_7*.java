@@ -1,6 +1,7 @@
 /*Faça um programa que pede o dia e mês de aniversário e diz quantos dias faltam para o aniversário, 
 quantos dias se passaram do aniversário ou se hoje é o aniversário do usuário. 
 - Não utilizar bibliotecas -
+(exercício proposto)
 */
 
 package	defaultPackage;
