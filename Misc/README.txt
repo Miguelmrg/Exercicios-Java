@@ -1,0 +1,1 @@
+exercícios com pouca contextualização
